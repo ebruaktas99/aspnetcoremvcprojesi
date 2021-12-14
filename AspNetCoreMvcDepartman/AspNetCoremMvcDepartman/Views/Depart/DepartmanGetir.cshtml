@@ -1,0 +1,28 @@
+﻿
+@model AspNetCoremMvcDepartman.Models.Departman
+
+@{
+    ViewData["Title"] = "DepartmanGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<!--Departmanguncelleyi çalışıtıran beginform-->
+@using (Html.BeginForm("DepartmanGuncelle", "Depart", FormMethod.Post))
+{
+    <div>
+        <b>Departman ID</b>
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <b>Departman Adı</b>
+        @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+
+    </div>
+
+    <br />
+
+    <button class="btn btn-info" style="background-color:lightgreen">Departmanı Güncelle</button>
+}

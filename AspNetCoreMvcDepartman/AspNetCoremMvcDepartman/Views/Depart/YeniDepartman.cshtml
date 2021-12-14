@@ -1,0 +1,23 @@
+﻿
+@model AspNetCoremMvcDepartman.Models.Departman
+
+
+@{
+    ViewData["Title"] = "YeniDepartman";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+
+    <div>
+        <b>Departman Adı</b>
+        @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+
+    </div>
+
+    <br />
+
+   <button class="btn btn-info">Kaydet</button>
+
+</form>

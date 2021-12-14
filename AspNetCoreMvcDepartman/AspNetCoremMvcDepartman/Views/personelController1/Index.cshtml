@@ -1,0 +1,44 @@
+﻿@using AspNetCoremMvcDepartman.Models
+@model List<Personel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--Test layoutu kullanır.-->
+<br />
+<table class="table table-bordered">
+
+    <tr>
+
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Departman</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <td>@x.PerID</td>
+            <td>@x.PerAd</td>
+            <td>@x.PerSoyad</td>
+            <td>@x.PerSehir</td>
+            <td>@x.</td>
+            <td><a href="/Depart/DepartmanSil/@x.PerID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Depart/DepartmanGetir/@x.PerID" class="btn btn-warning">Güncelle</a></td>
+          
+        </tr>
+    }
+</table>
+
+<a href="/Depart/YeniDepartman/" class="btn btn-success">Yeni Departmanı Ekle</a>
+
+
+
